@@ -102,6 +102,33 @@
       outline: 2px solid #801018;
       outline-offset: 4px;
     }
+
+    /* MODIFICACIÓN: Solución para centrar verticalmente el contenido de las tarjetas de 8CHOQ */
+    .horizontal-card {
+      display: flex; /* Contenedor flexible */
+      flex-direction: column; /* Contenido en columna */
+      justify-content: center; /* Centrado vertical principal */
+      height: 100%; /* Ocupa todo el alto del contenedor */
+      min-height: 600px; /* Altura mínima fija para asegurar el efecto de centrado */
+    }
+    
+    /* Envolvemos el texto en su propio div centrado */
+    .card-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centra el texto en su bloque */
+      flex-grow: 1; /* Ocupa el espacio disponible */
+      margin-bottom: 2rem; /* Espacio antes de las imágenes */
+    }
+
+    /* Envolvemos las imágenes en su propio div centrado */
+    .card-images-wrapper {
+      display: flex;
+      justify-content: center; /* Centra el grid horizontalmente */
+      align-items: center; /* Centra el grid verticalmente */
+      flex-grow: 1; /* Ocupa el espacio disponible */
+      width: 100%;
+    }
   </style>
 </head>
 <body class="bg-paper text-charcoal dark:bg-darkBg dark:text-paper font-sans antialiased selection:bg-wine selection:text-white relative overflow-x-hidden">
@@ -216,7 +243,6 @@
           <p data-i18n="sydQuote" class="text-xs text-paper/70 italic">"Diseño conceptual y exploración creativa"</p>
         </div>
 
-        <!-- SYD MAIN ADAPTADA (object-cover) -->
         <div class="md:col-span-7 bg-white/5 p-6 rounded-lg border border-white/10 space-y-6">
           <div class="img-zoom reveal-img rounded overflow-hidden border border-white/10 cursor-pointer lightbox-trigger bg-black/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221393/syd_main.jpg">
             <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221393/syd_main.jpg" alt="SYD NOIR - Detalles de confección y concepto" loading="lazy" class="w-full h-auto max-h-[600px] object-cover">
@@ -235,7 +261,7 @@
         </div>
       </div>
 
-      <!-- Galería Syd Noir (object-cover) -->
+      <!-- Galería Syd Noir -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="aspect-[3/4] img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221391/foto1.jpg">
           <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221391/foto1.jpg" alt="Syd Noir - Lace Tee" loading="lazy" class="w-full h-full object-cover">
@@ -313,8 +339,8 @@
       <div id="horizontal-wrapper" class="overflow-hidden w-full py-4">
         <div id="horizontal-container" class="flex flex-nowrap gap-8 transition-transform duration-700 ease-out">
 
-          <!-- CARD FASE 01: CONCEPTO (object-cover) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 flex flex-col justify-between shadow-xl">
+          <!-- CARD FASE 01: CONCEPTO (con mood3 recortado desde abajo) -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 shadow-xl">
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <span class="font-serif text-5xl text-wine font-bold">01</span>
@@ -327,21 +353,25 @@
                 El desarrollo de la colección comienza con la investigación de tendencias, identificando referencias visuales, deportivas y culturales que construyen la dirección creativa de la temporada.
               </p>
             </div>
-            <div class="grid grid-cols-3 gap-3 pt-6">
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg" alt="8CHOQ Concept Mood 1" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg" alt="8CHOQ Concept Mood 2" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg" alt="8CHOQ Concept Mood 3" loading="lazy" class="w-full h-full object-cover">
+            <!-- MODIFICACIÓN: Envoltura para centrar verticalmente -->
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-3 gap-3 w-full">
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg" alt="8CHOQ Concept Mood 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg" alt="8CHOQ Concept Mood 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <!-- mood3 con recorte y centrado especial -->
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg" alt="8CHOQ Concept Mood 3" loading="lazy" class="w-full h-full object-cover" style="object-position: center 25%;">
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- CARD FASE 02: DISEÑO & MOLDERÍA (object-cover) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 flex flex-col justify-between shadow-xl">
+          <!-- CARD FASE 02: DISEÑO & MOLDERÍA (MODIFICACIÓN: Formato 2x2 Grande y Centrado) -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 shadow-xl">
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <span class="font-serif text-5xl text-wine font-bold">02</span>
@@ -354,24 +384,27 @@
                 A partir del concepto se desarrolla la moldería y se definen las siluetas, colores y proporciones que darán forma a la colección. Se realiza una muestra con un textil de mismas características para evaluar el calce, comodidad y movimiento.
               </p>
             </div>
-            <div class="grid grid-cols-4 gap-3 pt-6">
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221296/2_8Q_1.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221296/2_8Q_1.jpg" alt="Design 1" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221296/2_8Q_2.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221296/2_8Q_2.jpg" alt="Design 2" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221297/2_8Q_3.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221297/2_8Q_3.jpg" alt="Design 3" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221297/2_8Q_4.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221297/2_8Q_4.jpg" alt="Design 4" loading="lazy" class="w-full h-full object-cover">
+            <!-- MODIFICACIÓN: Grid de 2x2 (2 columnas, 2 filas) y Envoltura para centrado -->
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg" alt="Design 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg" alt="Design 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg" alt="Design 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg" alt="Design 4" loading="lazy" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- CARD FASE 03: ESTAMPAS (object-cover) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 flex flex-col justify-between shadow-xl">
+          <!-- CARD FASE 03: ESTAMPAS -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 shadow-xl">
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <span class="font-serif text-5xl text-wine font-bold">03</span>
@@ -384,21 +417,24 @@
                 Desarrollo de estampas aplicadas a distintas líneas de producto, desde el concepto gráfico hasta su materialización en prenda (Estampas Únicas y Estampas Continuas / Rapports).
               </p>
             </div>
-            <div class="grid grid-cols-3 gap-3 pt-6">
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg" alt="Estampa 1" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg" alt="Estampa 2" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg" alt="Estampa 3" loading="lazy" class="w-full h-full object-cover">
+            <!-- MODIFICACIÓN: Envoltura para centrado vertical -->
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-3 gap-3 w-full">
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg" alt="Estampa 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg" alt="Estampa 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg" alt="Estampa 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- CARD FASE 04: TALLER (object-cover) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 flex flex-col justify-between shadow-xl">
+          <!-- CARD FASE 04: TALLER (En horizontal) -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 shadow-xl">
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <span class="font-serif text-5xl text-wine font-bold">04</span>
@@ -406,26 +442,30 @@
                   <h3 data-i18n="f4Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">TALLER</h3>
                   <span data-i18n="f4Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Desarrollo en Taller y Muestras</span>
                 </div>
+                
               </div>
               <p data-i18n="f4Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
                 Trabajo directo en el taller para la confección y supervisión de prototipos. Coordinación de moldería, pruebas de calce y ajustes de costura para las colecciones.
               </p>
             </div>
-            <div class="grid grid-cols-3 gap-3 pt-6">
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg" alt="Taller 8CHOQ - 1" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg" alt="Taller 8CHOQ - 2" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg" alt="Taller 8CHOQ - 3" loading="lazy" class="w-full h-full object-cover">
+            <!-- MODIFICACIÓN: Envoltura para centrado vertical -->
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-full">
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg" alt="Taller 8CHOQ - 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg" alt="Taller 8CHOQ - 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg" alt="Taller 8CHOQ - 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- CARD FASE 05: PRODUCCIÓN (object-cover) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 flex flex-col justify-between shadow-xl">
+          <!-- CARD FASE 05: PRODUCCIÓN (En horizontal) -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-8 rounded-xl border border-wine/10 shadow-xl">
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <span class="font-serif text-5xl text-wine font-bold">05</span>
@@ -438,12 +478,15 @@
                 Del desarrollo técnico a la producción de la prenda. Comunicación fluida con talleres externos a través de fichas técnicas de avíos, costuras y tablas de talles para las distintas líneas (Running, Gym, Puffer, Outdoor).
               </p>
             </div>
-            <div class="grid grid-cols-2 gap-3 pt-6 max-w-lg mx-auto">
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg" alt="Producción 8CHOQ" loading="lazy" class="w-full h-full object-cover">
-              </div>
-              <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg">
-                <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg" alt="Producción Outdoor" loading="lazy" class="w-full h-full object-cover">
+            <!-- MODIFICACIÓN: Envoltura para centrado vertical -->
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto w-full">
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg" alt="Producción 8CHOQ" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg" alt="Producción Outdoor" loading="lazy" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
           </div>
@@ -485,19 +528,20 @@
         </div>
       </div>
 
-      <!-- Fotos de Imprenta (Kaz) -->
+      <!-- Fotos de Imprenta (Kaz) en horizontal -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto items-start">
-        <div class="img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_1.jpg">
-          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_1.jpg" alt="Kaz Imprenta 1" loading="lazy" class="w-full h-auto object-cover">
+        <div class="aspect-[4/3] img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_1.jpg">
+          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_1.jpg" alt="Kaz Imprenta 1" loading="lazy" class="w-full h-full object-cover">
         </div>
-        <div class="img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_2.jpg">
-          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_2.jpg" alt="Kaz Imprenta 2" loading="lazy" class="w-full h-auto object-cover">
+        <div class="aspect-[4/3] img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_2.jpg">
+          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221342/kaz_2.jpg" alt="Kaz Imprenta 2" loading="lazy" class="w-full h-full object-cover">
         </div>
-        <div class="img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221343/kaz_3.jpg">
-          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221343/kaz_3.jpg" alt="Kaz Imprenta 3" loading="lazy" class="w-full h-auto object-cover">
+        <div class="aspect-[4/3] img-zoom reveal-img rounded border border-white/10 cursor-pointer lightbox-trigger overflow-hidden bg-white/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221343/kaz_3.jpg">
+          <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221343/kaz_3.jpg" alt="Kaz Imprenta 3" loading="lazy" class="w-full h-full object-cover">
         </div>
       </div>
 
+      
     </div>
   </section>
 
@@ -647,7 +691,7 @@
         s5: "Product Development",
         s6: "Graphic Production",
         s7: "Tech Packs",
-        s8: "DTF - DTG - Sublimation",
+        s8: "DTF - DTG - Sublimación",
         sydTag: "Personal Project",
         sydQuote: '"Conceptual design and creative exploration"',
         sydConceptTitle: "Brand Concept",
@@ -685,7 +729,7 @@
         kStep2: "Development",
         kStep2Sub: "Technical files, spec sheets, and prep.",
         kStep3: "Production",
-        kStep3Sub: "DTG, DTF, Sublimation, and quality control.",
+        kStep3Sub: "DTG, DTF, Sublimación, and quality control.",
         contactTag: "Let's Connect",
         contactTitle: "Contact & Links",
         downloadCV: "Download Resume / CV", 
