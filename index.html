@@ -6,11 +6,11 @@
 
   <!-- SEO & Open Graph Metadata -->
   <title>Giuliana Valerio | Fashion & Textile Designer Portfolio</title>
-  <meta name="description" content="Portfolio profesional de Giuliana Valerio. Diseñadora de Indumentaria y Textil especializada en desarrollo de producto, moldería, estampas y fichas técnicas.">
-  <meta name="keywords" content="Giuliana Valerio, Fashion Design, Textile Design, Syd Noir, 8CHOQ, Tech Packs, DTG, DTF">
+  <meta name="description" content="Portfolio profesional de Giuliana Valerio. Diseñadora de Moda y Textil especializada en desarrollo de producto, patronaje, estampados y fichas técnicas.">
+  <meta name="keywords" content="Giuliana Valerio, Fashion Design, Textile Design, Syd Noir, 8choQ, Tech Packs, DTG, DTF">
   <meta name="author" content="Giuliana Valerio">
   <meta property="og:title" content="Giuliana Valerio | Fashion & Textile Designer">
-  <meta property="og:description" content="Portfolio profesional de diseño de indumentaria y textil.">
+  <meta property="og:description" content="Portfolio profesional de diseño de moda y textil.">
   <meta property="og:type" content="website">
 
   <!-- Tailwind CSS -->
@@ -103,7 +103,7 @@
       outline-offset: 4px;
     }
 
-    /* MODIFICACIÓN: Solución para centrar verticalmente el contenido de las tarjetas de 8CHOQ */
+    /* Altura dinámica en móvil, fija en escritorio para las tarjetas de slider */
     .horizontal-card {
       display: flex;
       flex-direction: column;
@@ -118,21 +118,11 @@
       }
     }
     
-    /* Envolvemos el texto en su propio div centrado */
-    .card-text-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Centra el texto en su bloque */
-      flex-grow: 1; /* Ocupa el espacio disponible */
-      margin-bottom: 2rem; /* Espacio antes de las imágenes */
-    }
-
-    /* Envolvemos las imágenes en su propio div centrado */
     .card-images-wrapper {
       display: flex;
-      justify-content: center; /* Centra el grid horizontalmente */
-      align-items: center; /* Centra el grid verticalmente */
-      flex-grow: 1; /* Ocupa el espacio disponible */
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
       width: 100%;
     }
   </style>
@@ -150,8 +140,8 @@
       <!-- Nav Desktop -->
       <nav class="hidden md:flex space-x-8 text-xs tracking-widest uppercase font-semibold text-charcoal/90 dark:text-paper/90">
         <a href="#about" data-i18n="navAbout" class="hover:text-wine transition-colors">Perfil</a>
+        <a href="#8choq" class="hover:text-wine transition-colors">8choQ</a>
         <a href="#syd-noir" class="hover:text-wine transition-colors">Syd Noir</a>
-        <a href="#8choq" class="hover:text-wine transition-colors">8CHOQ</a>
         <a href="#kolour" class="hover:text-wine transition-colors">Kolour by Kaz</a>
         <a href="#contact" data-i18n="navContact" class="hover:text-wine transition-colors">Contacto</a>
       </nav>
@@ -181,8 +171,8 @@
     <!-- Menú Responsive Móvil -->
     <div id="mobile-menu" class="hidden md:hidden bg-paper dark:bg-darkBg border-b border-wine/10 px-6 py-6 flex flex-col space-y-4 text-xs tracking-widest uppercase font-semibold text-charcoal/90 dark:text-paper/90">
       <a href="#about" data-i18n="navAbout" class="mobile-link hover:text-wine">Perfil</a>
+      <a href="#8choq" class="mobile-link hover:text-wine">8choQ</a>
       <a href="#syd-noir" class="mobile-link hover:text-wine">Syd Noir</a>
-      <a href="#8choq" class="mobile-link hover:text-wine">8CHOQ</a>
       <a href="#kolour" class="mobile-link hover:text-wine">Kolour by Kaz</a>
       <a href="#contact" data-i18n="navContact" class="mobile-link hover:text-wine">Contacto</a>
     </div>
@@ -195,31 +185,46 @@
       <!-- Bio de la Diseñadora -->
       <div class="lg:col-span-7 space-y-6">
         <div>
-          <span data-i18n="heroSubtitle" class="text-xs uppercase tracking-[0.3em] text-wine font-bold block mb-2">Diseñadora de Indumentaria y Textil</span>
+          <span data-i18n="heroSubtitle" class="text-xs uppercase tracking-[0.3em] text-wine font-bold block mb-2">Diseñadora de Moda y Textil</span>
           <h1 class="font-serif text-4xl md:text-6xl font-bold text-charcoal dark:text-paper leading-tight">
             Giuliana Valerio
           </h1>
         </div>
 
         <p data-i18n="bio1" class="text-sm md:text-base text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-          Especialista en el desarrollo integral de colecciones textiles e indumentaria. Mi enfoque une la dirección creativa y el análisis de tendencias con la ejecución técnica: moldería, fichas técnicas, desarrollo de estampas y coordinación de producción.
+          Diseñadora de Moda y Textil especializada en diseño y desarrollo de producto, con experiencia principalmente en sportswear, prendas outdoor y moda urbana.
         </p>
         <p data-i18n="bio2" class="text-sm md:text-base text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-          Con experiencia en marcas de Argentina y Sídney, transformo conceptos creativos en productos viables y funcionales, dominando procesos de impresión digital (DTG, DTF, sublimación) y gestión con talleres externos.
+          Desarrollo colecciones y prendas desde el concepto y diseño hasta el desarrollo técnico y la producción, incorporando también el diseño de estampados aplicado a moda.
+        </p>
+        <p data-i18n="bio3" class="text-base md:text-lg text-wine font-serif font-bold italic">
+          Del concepto de diseño a la prenda acabada.
         </p>
 
-        <!-- Especialidades / Skills Tags -->
+        <!-- Nueva Sección: Áreas de Experiencia -->
         <div class="pt-6 border-t border-wine/20">
-          <h3 data-i18n="specTitle" class="text-xs uppercase tracking-[0.25em] text-wine font-bold mb-4">Especialidades</h3>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4 text-xs text-charcoal dark:text-paper font-semibold">
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s1">Diseño de Indumentaria</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s2">Relación con Proveedores</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s3">Diseño Textil & Estampas</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s4">Investigación de Tendencias</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s5">Desarrollo de Producto</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s6">Producción Gráfica</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s7">Fichas Técnicas</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-wine"></span><span data-i18n="s8">DTF - DTG - Sublimación</span></div>
+          <h3 data-i18n="specTitle" class="text-xs uppercase tracking-[0.25em] text-wine font-bold mb-6">Áreas de Experiencia</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-sm">
+            <!-- Moda -->
+            <div>
+              <strong data-i18n="expModaTitle" class="block font-bold text-charcoal dark:text-paper mb-1">MODA</strong>
+              <span data-i18n="expModaList" class="text-charcoal/80 dark:text-paper/80 font-medium text-xs leading-relaxed">Sportswear · Outdoor · Moda urbana · Hombre · Mujer · Unisex</span>
+            </div>
+            <!-- Producto -->
+            <div>
+              <strong data-i18n="expProdTitle" class="block font-bold text-charcoal dark:text-paper mb-1">PRODUCTO</strong>
+              <span data-i18n="expProdList" class="text-charcoal/80 dark:text-paper/80 font-medium text-xs leading-relaxed">Prendas deportivas · Prendas exteriores · Bañadores · Corpiños deportivos · Accesorios · Bolsos · Mochilas</span>
+            </div>
+            <!-- Tejidos -->
+            <div>
+              <strong data-i18n="expTejidosTitle" class="block font-bold text-charcoal dark:text-paper mb-1">TEJIDOS</strong>
+              <span data-i18n="expTejidosList" class="text-charcoal/80 dark:text-paper/80 font-medium text-xs leading-relaxed">Punto · Circular · Tricot · Plana ligera · Plana pesada · Tejidos técnicos · Impermeables</span>
+            </div>
+            <!-- Estampados -->
+            <div>
+              <strong data-i18n="expEstampadosTitle" class="block font-bold text-charcoal dark:text-paper mb-1">ESTAMPADOS</strong>
+              <span data-i18n="expEstampadosList" class="text-charcoal/80 dark:text-paper/80 font-medium text-xs leading-relaxed">Diseño de estampados · Placement · Rapport · Serigrafía · DTG · DTF · Sublimación</span>
+            </div>
           </div>
         </div>
       </div>
@@ -227,7 +232,7 @@
       <!-- FOTO PRINCIPAL PERFIL -->
       <div class="lg:col-span-5 aspect-[3/4] img-zoom reveal-img rounded-md shadow-2xl border border-wine/10 cursor-pointer lightbox-trigger" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221391/foto2.jpg">
         <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221391/foto2.jpg" 
-             alt="Giuliana Valerio - Diseñadora de Indumentaria" 
+             alt="Giuliana Valerio - Diseñadora de Moda" 
              loading="eager"
              class="w-full h-full object-cover">
       </div>
@@ -235,33 +240,299 @@
     </div>
   </section>
 
-  <!-- PROYECTO 1: SYD NOIR -->
-  <section id="syd-noir" class="py-24 bg-charcoal text-paper relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-16 border-b border-white/10 pb-12">
-        <div class="md:col-span-5 space-y-3">
-          <span data-i18n="sydTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Proyecto Personal</span>
-          <!-- Logo SydNoir -->
-          <div class="py-3">
-            <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221409/SydNoir.png" alt="Syd Noir" class="h-48 md:h-72 object-contain">
+  <!-- PROYECTO 1: 8choQ SPORTSWEAR -->
+  <section id="8choq" class="relative bg-charcoal text-paper overflow-hidden py-24">
+    
+    <!-- Encabezado -->
+    <div class="max-w-7xl mx-auto px-6 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-6 space-y-4">
+          <span data-i18n="c8choqTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Experiencia profesional · Diseño de moda y sportswear</span>
+          
+          <!-- LOGO 8choQ: Se invierte para que se vea blanco sobre el fondo oscuro -->
+          <div class="py-2">
+            <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221407/8choQ.png" alt="8Q Sportswear" class="h-16 md:h-20 object-contain brightness-0 invert">
           </div>
-          <p data-i18n="sydQuote" class="text-xs text-paper/70 italic">"Diseño conceptual y exploración creativa"</p>
+          <h2 class="sr-only">8choQ Sportswear</h2>
+
+          <p data-i18n="c8choqLocation" class="text-xs uppercase tracking-widest font-semibold text-paper/70">Argentina · Venta a nivel nacional | 2020–actualidad</p>
+          <p data-i18n="c8choqRole" class="text-wine font-bold text-sm mt-2">Diseñadora de Moda · Freelance / Full Time</p>
+          
+          <div class="space-y-4 mt-6 text-sm text-paper/90 leading-relaxed font-light">
+            <p data-i18n="c8choqIntro">Marca argentina de indumentaria deportiva con venta a nivel nacional, con la que estoy vinculada desde 2020 en diferentes posiciones dentro del área de diseño y desarrollo de producto.</p>
+            <p data-i18n="c8choqEvo">Comencé en 8choQ durante mi primer año de universidad en atención al cliente. Desde el segundo año de carrera trabajé como diseñadora freelance y, en 2024, me incorporé como diseñadora full time hasta 2025. Actualmente continúo colaborando con la marca como diseñadora freelance.</p>
+          </div>
         </div>
 
-        <div class="md:col-span-7 bg-white/5 p-6 rounded-lg border border-white/10 space-y-6">
-          <div class="img-zoom reveal-img rounded overflow-hidden border border-white/10 cursor-pointer lightbox-trigger bg-black/5" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221393/syd_main.jpg">
-            <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221393/syd_main.jpg" alt="SYD NOIR - Detalles de confección y concepto" loading="lazy" class="w-full h-auto max-h-[600px] object-cover">
+        <!-- Datos Destacados 8choQ -->
+        <div class="md:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-4 text-center mt-6 md:mt-0">
+          <div class="bg-white/5 p-4 rounded border border-white/10">
+            <span class="font-serif text-3xl text-wine font-bold block mb-1">6</span>
+            <span data-i18n="8qStat1" class="text-xs uppercase tracking-wider font-semibold block">Años</span>
+            <p data-i18n="8qStat1Sub" class="text-[10px] text-paper/70 mt-1">de experiencia vinculada a la marca</p>
+          </div>
+          <div class="bg-white/5 p-4 rounded border border-white/10">
+            <span class="font-serif text-3xl text-wine font-bold block mb-1">4</span>
+            <span data-i18n="8qStat2" class="text-xs uppercase tracking-wider font-semibold block">Colecciones</span>
+            <p data-i18n="8qStat2Sub" class="text-[10px] text-paper/70 mt-1">completas desarrolladas</p>
+          </div>
+          <div class="bg-white/5 p-4 rounded border border-white/10">
+            <span class="font-serif text-3xl text-wine font-bold block mb-1">8</span>
+            <span data-i18n="8qStat3" class="text-xs uppercase tracking-wider font-semibold block">Cápsulas</span>
+            <p data-i18n="8qStat3Sub" class="text-[10px] text-paper/70 mt-1">colecciones independientes</p>
+          </div>
+          <div class="bg-white/5 p-4 rounded border border-white/10">
+            <span class="font-serif text-3xl text-wine font-bold block mb-1">60+</span>
+            <span data-i18n="8qStat4" class="text-xs uppercase tracking-wider font-semibold block">Prendas</span>
+            <p data-i18n="8qStat4Sub" class="text-[10px] text-paper/70 mt-1">y referencias diseñadas</p>
+          </div>
+          <div class="bg-white/5 p-4 rounded border border-white/10">
+            <span class="font-serif text-3xl text-wine font-bold block mb-1">+15</span>
+            <span data-i18n="8qStat5" class="text-xs uppercase tracking-wider font-semibold block">Estampados</span>
+            <p data-i18n="8qStat5Sub" class="text-[10px] text-paper/70 mt-1">originales creados</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Slider -->
+      <div id="timeline-bar" class="pt-12 flex justify-between items-center text-[10px] md:text-xs font-bold uppercase tracking-widest max-w-4xl mx-auto">
+        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="0">
+          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-wine transition-all group-hover:scale-125"></span>
+          <span data-i18n="t1" class="step-text text-wine font-bold">Colecciones</span>
+        </button>
+        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
+        
+        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="1">
+          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
+          <span data-i18n="t2" class="step-text text-paper/50">Prendas</span>
+        </button>
+        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
+
+        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="2">
+          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
+          <span data-i18n="t3" class="step-text text-paper/50">Estampados</span>
+        </button>
+        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
+
+        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="3">
+          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
+          <span data-i18n="t4" class="step-text text-paper/50">Patronaje</span>
+        </button>
+        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
+
+        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="4">
+          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
+          <span data-i18n="t5" class="step-text text-paper/50">Producción</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Contenedor Horizontal Slider -->
+    <div class="relative max-w-7xl mx-auto px-6">
+      <button id="prev-card-btn" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-wine text-white p-3 rounded-full shadow-lg hover:bg-wineDark transition-all opacity-40 hover:opacity-100 disabled:opacity-20" aria-label="Anterior">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+      </button>
+      <button id="next-card-btn" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-wine text-white p-3 rounded-full shadow-lg hover:bg-wineDark transition-all opacity-80 hover:opacity-100" aria-label="Siguiente">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+      </button>
+
+      <div id="horizontal-wrapper" class="overflow-hidden w-full py-4">
+        <div id="horizontal-container" class="flex flex-nowrap gap-8 transition-transform duration-700 ease-out">
+
+          <!-- CARD FASE 01: Colecciones -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-darkCard p-5 md:p-8 rounded-xl border border-white/10 shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-5xl text-wine font-bold">01</span>
+                <div>
+                  <h3 data-i18n="f1Title" class="font-serif text-2xl font-bold text-paper">COLECCIONES</h3>
+                  <span data-i18n="f1Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Sportswear, Outdoor & Urbana</span>
+                </div>
+              </div>
+              <p data-i18n="f1Body" class="text-sm text-paper/90 leading-relaxed font-normal">
+                Desarrollo de colecciones de hombre, mujer y unisex, principalmente en las áreas de sportswear, outdoor y moda urbana, coordinando la visión de la temporada.
+              </p>
+            </div>
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
+                <div class="aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg" alt="8Q Concept 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg" alt="8Q Concept 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg" alt="8Q Concept 3" loading="lazy" class="w-full h-full object-cover" style="object-position: center 25%;">
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- CARD FASE 02: Prendas -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-darkCard p-5 md:p-8 rounded-xl border border-white/10 shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-5xl text-wine font-bold">02</span>
+                <div>
+                  <h3 data-i18n="f2Title" class="font-serif text-2xl font-bold text-paper">DISEÑO DE PRENDAS</h3>
+                  <span data-i18n="f2Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Indumentaria y Accesorios</span>
+                </div>
+              </div>
+              <p data-i18n="f2Body" class="text-sm text-paper/90 leading-relaxed font-normal">
+                Diseño y desarrollo de prendas y accesorios, incluyendo camisetas, sudaderas, leggings, tops, bañadores, pantalones, chaquetas, prendas exteriores, bolsos y mochilas.
+              </p>
+            </div>
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-2 gap-2 md:gap-4 max-w-2xl mx-auto w-full">
+                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg" alt="Prenda 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg" alt="Prenda 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg" alt="Prenda 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg" alt="Prenda 4" loading="lazy" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD FASE 03: Estampados -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-darkCard p-5 md:p-8 rounded-xl border border-white/10 shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-5xl text-wine font-bold">03</span>
+                <div>
+                  <h3 data-i18n="f3Title" class="font-serif text-2xl font-bold text-paper">ESTAMPADOS</h3>
+                  <span data-i18n="f3Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Técnicas: Serigrafía · DTG · DTF</span>
+                </div>
+              </div>
+              <p data-i18n="f3Body" class="text-sm text-paper/90 leading-relaxed font-normal">
+                Desarrollo de estampados originales, placement y rapports, preparando los archivos para producción mediante diferentes técnicas de estampación.
+              </p>
+            </div>
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
+                <div class="aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg" alt="Estampado 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg" alt="Estampado 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[3/4] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg" alt="Estampado 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD FASE 04: Patronaje -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-darkCard p-5 md:p-8 rounded-xl border border-white/10 shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-5xl text-wine font-bold">04</span>
+                <div>
+                  <h3 data-i18n="f4Title" class="font-serif text-2xl font-bold text-paper">PATRONAJE</h3>
+                  <span data-i18n="f4Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Desarrollo Técnico</span>
+                </div>
+                
+              </div>
+              <p data-i18n="f4Body" class="text-sm text-paper/90 leading-relaxed font-normal">
+                Desarrollo de patronaje, progresión de tallas, corrección de muestras de ajuste y elaboración detallada de fichas técnicas para asegurar la fidelidad del producto.
+              </p>
+            </div>
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
+                <div class="aspect-[4/3] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg" alt="Patronaje 1" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg" alt="Patronaje 2" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[4/3] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg" alt="Patronaje 3" loading="lazy" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD FASE 05: Producción -->
+          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-darkCard p-5 md:p-8 rounded-xl border border-white/10 shadow-xl">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-5xl text-wine font-bold">05</span>
+                <div>
+                  <h3 data-i18n="f5Title" class="font-serif text-2xl font-bold text-paper">PRODUCCIÓN</h3>
+                  <span data-i18n="f5Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Tejidos, Proveedores y Seguimiento</span>
+                </div>
+              </div>
+              <div class="text-sm text-paper/90 leading-relaxed font-normal space-y-2">
+                <p data-i18n="f5Body1">Selección de tejidos, colores, materiales y fornituras junto al equipo de diseño. Contacto directo con proveedores y talleres, seguimiento exhaustivo de muestras, producción y control de calidad.</p>
+                <p data-i18n="f5Body2" class="text-wine font-bold mt-4 pt-4 border-t border-white/10">2026 · Freelance: Actualmente continúo colaborando con 8Q en el desarrollo de estampados y colecciones cápsula, incluyendo propuestas de mujer y unisex para Summer 2026/27.</p>
+              </div>
+            </div>
+            <div class="card-images-wrapper pt-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto w-full">
+                <div class="aspect-video md:aspect-[4/3] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg" alt="Producción 8Q" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-video md:aspect-[4/3] img-zoom rounded border border-white/10 cursor-pointer lightbox-trigger bg-black/20 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg">
+                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg" alt="Producción Outdoor" loading="lazy" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTO 2: SYD NOIR -->
+  <section id="syd-noir" class="py-24 bg-paper dark:bg-darkBg relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-16 border-b border-wine/10 pb-12">
+        <div class="md:col-span-5 space-y-3">
+          <span data-i18n="sydTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Proyecto personal · Australia · 2026</span>
+          
+          <!-- LOGO SYD NOIR: Negro en modo claro (invert), Blanco en modo oscuro (dark:invert-0) -->
+          <div class="py-3">
+            <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221409/SydNoir.png" alt="Syd Noir" class="h-32 md:h-48 object-contain invert dark:invert-0">
+          </div>
+          <h2 class="sr-only">SYD NOIR</h2>
+
+          <p data-i18n="sydQuote" class="text-xs text-charcoal/70 dark:text-paper/70 italic">"Diseño y desarrollo de colección"</p>
+        </div>
+
+        <div class="md:col-span-7 bg-creamCard dark:bg-darkCard p-6 rounded-lg border border-wine/10 space-y-6 shadow-sm">
+          
           <div class="space-y-4">
-            <h3 data-i18n="sydConceptTitle" class="font-serif text-2xl text-wine font-bold uppercase tracking-wide">Concepto de Marca</h3>
-            <p data-i18n="sydConceptBody" class="text-sm text-paper/90 leading-relaxed font-light">
-              SYD NOIR PROJECT nace como un proyecto personal de experimentación en diseño de indumentaria. Inspirado en la estética urbana de Sídney, explora la relación entre diseño, identidad y producción en pequeñas series.
+            <h3 data-i18n="sydConceptTitle" class="font-serif text-2xl text-wine font-bold uppercase tracking-wide">Acerca del Proyecto</h3>
+            <p data-i18n="sydConceptBody" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-light">
+              Proyecto personal iniciado en Australia y desarrollado de forma integral, explorando la relación entre diseño, identidad y producción en pequeña escala. 
             </p>
-            <div class="pt-4 border-t border-white/10 flex flex-wrap gap-8 text-xs uppercase tracking-wider text-paper/80">
-              <div><strong data-i18n="sydObjLabel" class="text-wine block">Objetivo:</strong> <span data-i18n="sydObjVal">Explorar el diseño como herramienta para construir una identidad contemporánea.</span></div>
-              <div><strong data-i18n="sydRoleLabel" class="text-wine block">Mi Rol:</strong> <span data-i18n="sydRoleVal">Diseño integral de marca, colección, estampas y desarrollo técnico.</span></div>
+            <p data-i18n="sydConceptBody2" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-light mt-2">
+              <strong>Desarrollo integral:</strong> concepto, identidad de marca, investigación, colección, diseño, estampados, patronaje, fichas técnicas, prototipos, producción, dirección creativa y comunicación.
+            </p>
+            
+            <!-- Datos Destacados Syd Noir -->
+            <div class="pt-6 mt-4 border-t border-wine/10 grid grid-cols-3 gap-4 text-center">
+              <div>
+                <span class="font-serif text-2xl text-wine font-bold block mb-1">15</span>
+                <span data-i18n="sydStat1" class="text-[10px] md:text-xs uppercase tracking-wider font-semibold block text-charcoal/80 dark:text-paper/80">Prendas<br>desarrolladas</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl text-wine font-bold block mb-1">6</span>
+                <span data-i18n="sydStat2" class="text-[10px] md:text-xs uppercase tracking-wider font-semibold block text-charcoal/80 dark:text-paper/80">Prendas<br>vendidas</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl text-wine font-bold block mb-1"><i data-lucide="star" class="w-5 h-5 mx-auto text-wine"></i></span>
+                <span data-i18n="sydStat3" class="text-[10px] md:text-xs uppercase tracking-wider font-semibold block text-charcoal/80 dark:text-paper/80">Diseños únicos<br>limitados</span>
+              </div>
             </div>
           </div>
         </div>
@@ -286,244 +557,39 @@
     </div>
   </section>
 
-  <!-- PROYECTO 2: 8CHOQ SPORTSWEAR -->
-  <section id="8choq" class="relative bg-paper dark:bg-darkBg overflow-hidden py-16">
-    
-    <!-- Encabezado y Timeline Interactivo -->
-    <div class="max-w-7xl mx-auto px-6 text-center space-y-4 mb-8">
-      <span data-i18n="c8choqTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Diseño & Desarrollo Integral</span>
-      <!-- Logo 8choq -->
-      <div class="flex justify-center py-2">
-        <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221407/8choQ.png" alt="8choq" class="h-14 md:h-20 object-contain dark:brightness-200">
-      </div>
-      <p data-i18n="c8choqSubtitle" class="text-sm text-charcoal/80 dark:text-paper/80 italic">"Diseño de indumentaria deportiva y trabajo conjunto con producción"</p>
-
-      <!-- Botones Interactivos de Navegación (5 pasos) -->
-      <div id="timeline-bar" class="pt-6 flex justify-between items-center text-[10px] md:text-xs font-bold uppercase tracking-widest max-w-4xl mx-auto">
-        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="0">
-          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-wine transition-all group-hover:scale-125"></span>
-          <span data-i18n="t1" class="step-text text-wine font-bold">Concepto</span>
-        </button>
-        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
-        
-        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="1">
-          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
-          <span data-i18n="t2" class="step-text text-charcoal/50 dark:text-paper/50">Diseño</span>
-        </button>
-        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
-
-        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="2">
-          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
-          <span data-i18n="t3" class="step-text text-charcoal/50 dark:text-paper/50">Estampas</span>
-        </button>
-        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
-
-        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="3">
-          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
-          <span data-i18n="t4" class="step-text text-charcoal/50 dark:text-paper/50">Taller</span>
-        </button>
-        <span class="w-4 md:w-8 h-[1px] bg-wine/30"></span>
-
-        <button class="nav-step-btn flex flex-col items-center gap-1.5 transition-all duration-300 group focus:outline-none" data-card="4">
-          <span class="step-dot w-3.5 h-3.5 rounded-full border-2 border-wine bg-transparent transition-all group-hover:scale-125"></span>
-          <span data-i18n="t5" class="step-text text-charcoal/50 dark:text-paper/50">Producción</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Contenedor Horizontal con Botones Flotantes de Navegación -->
-    <div class="relative max-w-7xl mx-auto px-6">
-
-      <!-- Flechas flotantes de Navegación -->
-      <button id="prev-card-btn" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-wine text-white p-3 rounded-full shadow-lg hover:bg-wineDark transition-all opacity-40 hover:opacity-100 disabled:opacity-20" aria-label="Anterior">
-        <i data-lucide="chevron-left" class="w-6 h-6"></i>
-      </button>
-      <button id="next-card-btn" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-wine text-white p-3 rounded-full shadow-lg hover:bg-wineDark transition-all opacity-80 hover:opacity-100" aria-label="Siguiente">
-        <i data-lucide="chevron-right" class="w-6 h-6"></i>
-      </button>
-
-      <div id="horizontal-wrapper" class="overflow-hidden w-full py-4">
-        <div id="horizontal-container" class="flex flex-nowrap gap-8 transition-transform duration-700 ease-out">
-
-          <!-- CARD FASE 01: CONCEPTO -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-5 md:p-8 rounded-xl border border-wine/10 shadow-xl">
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="font-serif text-5xl text-wine font-bold">01</span>
-                <div>
-                  <h3 data-i18n="f1Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">CONCEPTO</h3>
-                  <span data-i18n="f1Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Investigación y Dirección</span>
-                </div>
-              </div>
-              <p data-i18n="f1Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-                El desarrollo de la colección comienza con la investigación de tendencias, identificando referencias visuales, deportivas y culturales que construyen la dirección creativa de la temporada.
-              </p>
-            </div>
-            <div class="card-images-wrapper pt-6">
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
-                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood1.jpg" alt="8CHOQ Concept Mood 1" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood2.jpg" alt="8CHOQ Concept Mood 2" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221282/mood3.jpg" alt="8CHOQ Concept Mood 3" loading="lazy" class="w-full h-full object-cover" style="object-position: center 25%;">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD FASE 02: DISEÑO & MOLDERÍA -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-5 md:p-8 rounded-xl border border-wine/10 shadow-xl">
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="font-serif text-5xl text-wine font-bold">02</span>
-                <div>
-                  <h3 data-i18n="f2Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">DISEÑO & MOLDERÍA</h3>
-                  <span data-i18n="f2Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Moldería de Muestra y Desarrollo</span>
-                </div>
-              </div>
-              <p data-i18n="f2Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-                A partir del concepto se desarrolla la moldería y se definen las siluetas, colores y proporciones que darán forma a la colección. Se realiza una muestra con un textil de mismas características para evaluar el calce, comodidad y movimiento.
-              </p>
-            </div>
-            <div class="card-images-wrapper pt-6">
-              <div class="grid grid-cols-2 gap-2 md:gap-4 max-w-2xl mx-auto w-full">
-                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_1.jpg" alt="Design 1" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_2.jpg" alt="Design 2" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_3.jpg" alt="Design 3" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/3] md:aspect-square img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788249205/2_8Q_4.jpg" alt="Design 4" loading="lazy" class="w-full h-full object-cover">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD FASE 03: ESTAMPAS -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-5 md:p-8 rounded-xl border border-wine/10 shadow-xl">
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="font-serif text-5xl text-wine font-bold">03</span>
-                <div>
-                  <h3 data-i18n="f3Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">ESTAMPAS</h3>
-                  <span data-i18n="f3Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Del Concepto al Producto</span>
-                </div>
-              </div>
-              <p data-i18n="f3Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-                Desarrollo de estampas aplicadas a distintas líneas de producto, desde el concepto gráfico hasta su materialización en prenda (Estampas Únicas y Estampas Continuas / Rapports).
-              </p>
-            </div>
-            <div class="card-images-wrapper pt-6">
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
-                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_1.jpg" alt="Estampa 1" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221377/3_8Q_2.jpg" alt="Estampa 2" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[3/4] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221378/3_8Q_3.jpg" alt="Estampa 3" loading="lazy" class="w-full h-full object-cover">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD FASE 04: TALLER (En horizontal) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-5 md:p-8 rounded-xl border border-wine/10 shadow-xl">
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="font-serif text-5xl text-wine font-bold">04</span>
-                <div>
-                  <h3 data-i18n="f4Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">TALLER</h3>
-                  <span data-i18n="f4Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Desarrollo en Taller y Muestras</span>
-                </div>
-              </div>
-              <p data-i18n="f4Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-                Trabajo directo en el taller para la confección y supervisión de prototipos. Coordinación de moldería, pruebas de calce y ajustes de costura para las colecciones.
-              </p>
-            </div>
-            <div class="card-images-wrapper pt-6">
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full">
-                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221147/4_8q1.jpg" alt="Taller 8CHOQ - 1" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q2.jpg" alt="Taller 8CHOQ - 2" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="col-span-2 md:col-span-1 aspect-video md:aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221146/4_8q3.jpg" alt="Taller 8CHOQ - 3" loading="lazy" class="w-full h-full object-cover">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD FASE 05: PRODUCCIÓN (En horizontal) -->
-          <div class="horizontal-card w-full md:w-[80%] lg:w-[75%] h-auto flex-shrink-0 bg-creamCard dark:bg-darkCard p-5 md:p-8 rounded-xl border border-wine/10 shadow-xl">
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="font-serif text-5xl text-wine font-bold">05</span>
-                <div>
-                  <h3 data-i18n="f5Title" class="font-serif text-2xl font-bold text-charcoal dark:text-paper">PRODUCCIÓN</h3>
-                  <span data-i18n="f5Sub" class="text-xs uppercase tracking-widest text-wine font-semibold">Producción Externa & Control de Calidad</span>
-                </div>
-              </div>
-              <p data-i18n="f5Body" class="text-sm text-charcoal/90 dark:text-paper/90 leading-relaxed font-normal">
-                Del desarrollo técnico a la producción de la prenda. Comunicación fluida con talleres externos a través de fichas técnicas de avíos, costuras y tablas de talles para las distintas líneas (Running, Gym, Puffer, Outdoor).
-              </p>
-            </div>
-            <div class="card-images-wrapper pt-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto w-full">
-                <div class="aspect-video md:aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221361/5_8q.jpg" alt="Producción 8CHOQ" loading="lazy" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-video md:aspect-[4/3] img-zoom rounded border border-wine/10 cursor-pointer lightbox-trigger bg-black/5 overflow-hidden" data-full="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg">
-                  <img src="https://res.cloudinary.com/mjpu9otg/image/upload/v1788221362/5_outdoor_2.jpg" alt="Producción Outdoor" loading="lazy" class="w-full h-full object-cover">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- PROYECTO 3: KOLOUR BY KAZ -->
   <section id="kolour" class="py-24 bg-charcoal text-paper relative">
     <div class="max-w-7xl mx-auto px-6">
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16">
-        <div class="md:col-span-5 space-y-4">
-          <span data-i18n="kTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Imprenta & Producción</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-16">
+        <div class="md:col-span-6 space-y-4">
+          <span data-i18n="kTag" class="text-xs uppercase tracking-[0.3em] text-wine font-bold">Experiencia profesional · Diseño gráfico aplicado</span>
           <h2 class="font-serif text-5xl font-bold">KOLOUR BY KAZ</h2>
-          <p data-i18n="kBody" class="text-sm text-paper/90 leading-relaxed font-light">
-            Diseño gráfico aplicado a la producción textil en Sídney. Gestión integral del taller de impresión para realizar producciones de manera rápida y eficiente.
+          <p data-i18n="kLocation" class="text-xs uppercase tracking-widest font-semibold text-paper/70">Sídney, Australia · 2026–actualidad | Venta en NSW</p>
+          <p data-i18n="kRole" class="text-wine font-bold text-sm mt-2">Diseñadora gráfica · Diseño aplicado a producción textil</p>
+          
+          <p data-i18n="kBody" class="text-sm text-paper/90 leading-relaxed font-light mt-4">
+            Estudio de impresión textil en Sídney, Australia, donde desarrollo propuestas gráficas aplicadas a prendas y productos textiles, trabajando directamente con clientes y empresas.
           </p>
+          <div class="pt-4 mt-4 border-t border-white/10">
+            <p data-i18n="kVolume" class="text-xs text-paper/70 italic">
+              Trabajo habitual con empresas que realizan pedidos de 50–100 unidades, gestionando aproximadamente 1–2 proyectos por semana.
+            </p>
+          </div>
         </div>
 
-        <div class="md:col-span-7 grid grid-cols-3 gap-4 text-center">
-          <div class="bg-white/5 p-4 rounded border border-white/10">
-            <span class="font-serif text-3xl text-wine font-bold block mb-1">01</span>
-            <span data-i18n="kStep1" class="text-xs uppercase tracking-wider font-semibold block mb-1">Selección</span>
-            <p data-i18n="kStep1Sub" class="text-[10px] text-paper/70">Color, textil, prenda y definición de gráfica.</p>
-          </div>
-          <div class="bg-white/5 p-4 rounded border border-white/10">
-            <span class="font-serif text-3xl text-wine font-bold block mb-1">02</span>
-            <span data-i18n="kStep2" class="text-xs uppercase tracking-wider font-semibold block mb-1">Desarrollo</span>
-            <p data-i18n="kStep2Sub" class="text-[10px] text-paper/70">Archivos, fichas técnicas y preparación.</p>
-          </div>
-          <div class="bg-white/5 p-4 rounded border border-white/10">
-            <span class="font-serif text-3xl text-wine font-bold block mb-1">03</span>
-            <span data-i18n="kStep3" class="text-xs uppercase tracking-wider font-semibold block mb-1">Producción</span>
-            <p data-i18n="kStep3Sub" class="text-[10px] text-paper/70">DTG, DTF, Sublimación y control final.</p>
-          </div>
+        <div class="md:col-span-6 bg-white/5 p-6 rounded border border-white/10 text-sm font-light text-paper/90 space-y-3">
+          <h3 data-i18n="kRespTitle" class="text-wine font-bold uppercase tracking-wider mb-4">Responsabilidades</h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li data-i18n="kResp1">Evaluación de diseños y necesidades del cliente para definir la mejor solución gráfica y de producción.</li>
+            <li data-i18n="kResp2">Selección de prendas, tejidos, tamaños y técnicas de impresión según el producto y el uso final.</li>
+            <li data-i18n="kResp3">Preparación de archivos y desarrollo de estampados.</li>
+            <li data-i18n="kResp4">Impresión textil mediante DTF, DTG y sublimación.</li>
+            <li data-i18n="kResp5">Rediseño y adaptación de logotipos.</li>
+            <li data-i18n="kResp6">Gestión y seguimiento de pedidos, con trato directo con el cliente.</li>
+            <li data-i18n="kResp7">Coordinación de pedidos de gran volumen junto a un asistente.</li>
+            <li data-i18n="kResp8">Producción en taller y control de calidad final.</li>
+          </ul>
         </div>
       </div>
 
@@ -556,14 +622,15 @@
         </div>
       </div>
 
-      <!-- Botón Descarga CV -->
+      <!-- Botón Descarga CV - Asegúrate de que el enlace de Cloudinary sea correcto -->
       <div>
-        <a href="img/CV_Giuliana_Valerio.pdf" 
+        <a href="https://res.cloudinary.com/mjpu9otg/image/upload/v1788228766/CV_Giuliana_Valerio_Barcelona_2026_FINAL_1.pdf" 
+           target="_blank"
            download="CV_Giuliana_Valerio.pdf" 
            data-i18n="downloadCV" 
            class="inline-flex items-center gap-2 text-xs uppercase tracking-widest border border-wine text-wine hover:bg-wine hover:text-white px-6 py-3 rounded-full transition-all duration-300 font-bold">
           <i data-lucide="download" class="w-4 h-4"></i>
-          Descargar Curriculum Vitae
+          Descargar Currículum vitae
         </a>
       </div>
 
@@ -620,59 +687,80 @@
         navAbout: "Perfil",
         navContact: "Contacto",
         btnContact: "Contactar",
-        heroSubtitle: "Diseñadora de Indumentaria y Textil",
-        bio1: "Especialista en el desarrollo integral de colecciones textiles e indumentaria. Mi enfoque une la dirección creativa y el análisis de tendencias con la ejecución técnica: moldería, fichas técnicas, desarrollo de estampas y coordinación de producción.",
-        bio2: "Con experiencia en marcas de Argentina y Sídney, transformo conceptos creativos en productos viables y funcionales, dominando procesos de impresión digital (DTG, DTF, sublimación) y gestión con talleres externos.",
-        specTitle: "Especialidades",
-        s1: "Diseño de Indumentaria",
-        s2: "Relación con Proveedores",
-        s3: "Diseño Textil & Estampas",
-        s4: "Investigación de Tendencias",
-        s5: "Desarrollo de Producto",
-        s6: "Producción Gráfica",
-        s7: "Fichas Técnicas",
-        s8: "DTF - DTG - Sublimación",
-        sydTag: "Proyecto Personal",
-        sydQuote: '"Diseño conceptual y exploración creativa"',
-        sydConceptTitle: "Concepto de Marca",
-        sydConceptBody: "SYD NOIR PROJECT nace como un proyecto personal de experimentación en diseño de indumentaria. Inspirado en la estética urbana de Sídney, explora la relación entre diseño, identidad y producción en pequeñas series.",
-        sydObjLabel: "Objetivo:",
-        sydObjVal: "Explorar el diseño como herramienta para construir una identidad contemporánea.",
-        sydRoleLabel: "Mi Rol:",
-        sydRoleVal: "Diseño integral de marca, colección, estampas y desarrollo técnico.",
-        c8choqTag: "Diseño & Desarrollo Integral",
-        c8choqSubtitle: '"Diseño de indumentaria deportiva y trabajo conjunto con producción"',
-        t1: "Concepto",
-        t2: "Diseño",
-        t3: "Estampas",
-        t4: "Taller",
+        heroSubtitle: "Diseñadora de Moda y Textil",
+        bio1: "Diseñadora de Moda y Textil especializada en diseño y desarrollo de producto, con experiencia principalmente en sportswear, prendas outdoor y moda urbana.",
+        bio2: "Desarrollo colecciones y prendas desde el concepto y diseño hasta el desarrollo técnico y la producción, incorporando también el diseño de estampados aplicado a moda.",
+        bio3: "Del concepto de diseño a la prenda acabada.",
+        specTitle: "Áreas de Experiencia",
+        expModaTitle: "MODA",
+        expModaList: "Sportswear · Outdoor · Moda urbana · Hombre · Mujer · Unisex",
+        expProdTitle: "PRODUCTO",
+        expProdList: "Prendas deportivas · Prendas exteriores · Bañadores · Corpiños deportivos · Accesorios · Bolsos · Mochilas",
+        expTejidosTitle: "TEJIDOS",
+        expTejidosList: "Punto · Circular · Tricot · Plana ligera · Plana pesada · Tejidos técnicos · Impermeables",
+        expEstampadosTitle: "ESTAMPADOS",
+        expEstampadosList: "Diseño de estampados · Placement · Rapport · Serigrafía · DTG · DTF · Sublimación",
+        c8choqTag: "Experiencia profesional · Diseño de moda y sportswear",
+        c8choqLocation: "Argentina · Venta a nivel nacional | 2020–actualidad",
+        c8choqRole: "Diseñadora de Moda · Freelance / Full Time",
+        c8choqIntro: "Marca argentina de indumentaria deportiva con venta a nivel nacional, con la que estoy vinculada desde 2020 en diferentes posiciones dentro del área de diseño y desarrollo de producto.",
+        c8choqEvo: "Comencé en 8Q durante mi primer año de universidad en atención al cliente. Desde el segundo año de carrera trabajé como diseñadora freelance y, en 2024, me incorporé como diseñadora full time hasta 2025. Actualmente continúo colaborando con la marca como diseñadora freelance.",
+        "8qStat1": "Años",
+        "8qStat1Sub": "de experiencia vinculada a la marca",
+        "8qStat2": "Colecciones",
+        "8qStat2Sub": "completas desarrolladas",
+        "8qStat3": "Cápsulas",
+        "8qStat3Sub": "colecciones independientes",
+        "8qStat4": "Prendas",
+        "8qStat4Sub": "y referencias diseñadas",
+        "8qStat5": "Estampados",
+        "8qStat5Sub": "originales creados",
+        t1: "Colecciones",
+        t2: "Prendas",
+        t3: "Estampados",
+        t4: "Patronaje",
         t5: "Producción",
-        f1Title: "CONCEPTO",
-        f1Sub: "Investigación y Dirección",
-        f1Body: "El desarrollo de la colección comienza con la investigación de tendencias, identificando referencias visuales, deportivas y culturales que construyen la dirección creativa de la temporada.",
-        f2Title: "DISEÑO & MOLDERÍA",
-        f2Sub: "Moldería de Muestra y Desarrollo",
-        f2Body: "A partir del concepto se desarrolla la moldería y se definen las siluetas, colores y proporciones que darán forma a la colección. Se realiza una muestra con un textil de mismas características para evaluar el calce, comodidad y movimiento.",
-        f3Title: "ESTAMPAS",
-        f3Sub: "Del Concepto al Producto",
-        f3Body: "Desarrollo de estampas aplicadas a distintas líneas de producto, desde el concepto gráfico hasta su materialización en prenda (Estampas Únicas y Estampas Continuas / Rapports).",
-        f4Title: "TALLER",
-        f4Sub: "Desarrollo en Taller y Muestras",
-        f4Body: "Trabajo directo en el taller para la confección y supervisión de prototipos. Coordinación de moldería, pruebas de calce y ajustes de costura para las colecciones.",
+        f1Title: "COLECCIONES",
+        f1Sub: "Sportswear, Outdoor & Urbana",
+        f1Body: "Desarrollo de colecciones de hombre, mujer y unisex, principalmente en las áreas de sportswear, outdoor y moda urbana, coordinando la visión de la temporada.",
+        f2Title: "DISEÑO DE PRENDAS",
+        f2Sub: "Indumentaria y Accesorios",
+        f2Body: "Diseño y desarrollo de prendas y accesorios, incluyendo camisetas, sudaderas, leggings, tops, bañadores, pantalones, chaquetas, prendas exteriores, bolsos y mochilas.",
+        f3Title: "ESTAMPADOS",
+        f3Sub: "Técnicas: Serigrafía · DTG · DTF",
+        f3Body: "Desarrollo de estampados originales, placement y rapports, preparando los archivos para producción mediante diferentes técnicas de estampación.",
+        f4Title: "PATRONAJE",
+        f4Sub: "Desarrollo Técnico",
+        f4Body: "Desarrollo de patronaje, progresión de tallas, corrección de muestras de ajuste y elaboración detallada de fichas técnicas para asegurar la fidelidad del producto.",
         f5Title: "PRODUCCIÓN",
-        f5Sub: "Producción Externa & Control de Calidad",
-        f5Body: "Del desarrollo técnico a la producción de la prenda. Comunicación fluida con talleres externos a través de fichas técnicas de avíos, costuras y tablas de talles para las distintas líneas (Running, Gym, Puffer, Outdoor).",
-        kTag: "Imprenta & Producción",
-        kBody: "Diseño gráfico aplicado a la producción textil en Sídney. Gestión integral del taller de impresión para realizar producciones de manera rápida y eficiente.",
-        kStep1: "Selección",
-        kStep1Sub: "Color, textil, prenda y definición de gráfica.",
-        kStep2: "Desarrollo",
-        kStep2Sub: "Archivos, fichas técnicas y preparación.",
-        kStep3: "Producción",
-        kStep3Sub: "DTG, DTF, Sublimación y control final.",
+        f5Sub: "Tejidos, Proveedores y Seguimiento",
+        f5Body1: "Selección de tejidos, colores, materiales y fornituras junto al equipo de diseño. Contacto directo con proveedores y talleres, seguimiento exhaustivo de muestras, producción y control de calidad.",
+        f5Body2: "2026 · Freelance: Actualmente continúo colaborando con 8Q en el desarrollo de estampados y colecciones cápsula, incluyendo propuestas de mujer y unisex para Summer 2026/27.",
+        sydTag: "Proyecto personal · Australia · 2026",
+        sydQuote: '"Diseño y desarrollo de colección"',
+        sydConceptTitle: "Acerca del Proyecto",
+        sydConceptBody: "Proyecto personal iniciado en Australia y desarrollado de forma integral, explorando la relación entre diseño, identidad y producción en pequeña escala.",
+        sydConceptBody2: "Desarrollo integral: concepto, identidad de marca, investigación, colección, diseño, estampados, patronaje, fichas técnicas, prototipos, producción, dirección creativa y comunicación.",
+        sydStat1: "Prendas<br>desarrolladas",
+        sydStat2: "Prendas<br>vendidas",
+        sydStat3: "Diseños únicos<br>limitados",
+        kTag: "Experiencia profesional · Diseño gráfico aplicado",
+        kLocation: "Sídney, Australia · 2026–actualidad | Venta en NSW",
+        kRole: "Diseñadora gráfica · Diseño aplicado a producción textil",
+        kBody: "Estudio de impresión textil en Sídney, Australia, donde desarrollo propuestas gráficas aplicadas a prendas y productos textiles, trabajando directamente con clientes y empresas.",
+        kVolume: "Trabajo habitual con empresas que realizan pedidos de 50–100 unidades, gestionando aproximadamente 1–2 proyectos por semana.",
+        kRespTitle: "Responsabilidades",
+        kResp1: "Evaluación de diseños y necesidades del cliente para definir la mejor solución gráfica y de producción.",
+        kResp2: "Selección de prendas, tejidos, tamaños y técnicas de impresión según el producto y el uso final.",
+        kResp3: "Preparación de archivos y desarrollo de estampados.",
+        kResp4: "Impresión textil mediante DTF, DTG y sublimación.",
+        kResp5: "Rediseño y adaptación de logotipos.",
+        kResp6: "Gestión y seguimiento de pedidos, con trato directo con el cliente.",
+        kResp7: "Coordinación de pedidos de gran volumen junto a un asistente.",
+        kResp8: "Producción en taller y control de calidad final.",
         contactTag: "¿Hablamos?",
         contactTitle: "Contacto & Redes",
-        downloadCV: "Descargar Curriculum Vitae",
+        downloadCV: "Descargar Currículum vitae",
         close: "Cerrar"
       },
       en: {
@@ -680,55 +768,76 @@
         navContact: "Contact",
         btnContact: "Get in Touch",
         heroSubtitle: "Fashion & Textile Designer",
-        bio1: "Specialist in end-to-end garment and textile collection development. My work pairs creative direction and trend forecasting with technical execution: patternmaking, spec sheets, print development, and production oversight.",
-        bio2: "With experience across brands in Argentina and Sydney, I turn concepts into market-ready products, leveraging digital printing methods (DTG, DTF, sublimation) and seamless factory collaboration.",
-        specTitle: "Specialties",
-        s1: "Fashion Design",
-        s2: "Supplier Communication",
-        s3: "Textile & Print Design",
-        s4: "Trend Research",
-        s5: "Product Development",
-        s6: "Graphic Production",
-        s7: "Tech Packs",
-        s8: "DTF - DTG - Sublimación",
-        sydTag: "Personal Project",
-        sydQuote: '"Conceptual design and creative exploration"',
-        sydConceptTitle: "Brand Concept",
-        sydConceptBody: "SYD NOIR PROJECT is a personal experimental brand exploring garment design. Inspired by Sydney’s urban aesthetic, it studies the link between design, identity, and small-batch production.",
-        sydObjLabel: "Objective:",
-        sydObjVal: "Explore design as a core tool to build a contemporary identity.",
-        sydRoleLabel: "My Role:",
-        sydRoleVal: "Comprehensive brand design, collection, prints, and technical development.",
-        c8choqTag: "End-to-End Design & Development",
-        c8choqSubtitle: '"Sportswear design and hands-on production management"',
-        t1: "Concept",
-        t2: "Design",
+        bio1: "Fashion and Textile Designer specialized in product design and development, with experience mainly in sportswear, outdoor apparel, and urban fashion.",
+        bio2: "I develop collections and garments from concept and design to technical development and production, also incorporating print design applied to fashion.",
+        bio3: "From design concept to finished garment.",
+        specTitle: "Areas of Expertise",
+        expModaTitle: "FASHION",
+        expModaList: "Sportswear · Outdoor · Urban Fashion · Menswear · Womenswear · Unisex",
+        expProdTitle: "PRODUCT",
+        expProdList: "Sportswear · Outerwear · Swimwear · Sports Bras · Accessories · Bags · Backpacks",
+        expTejidosTitle: "FABRICS",
+        expTejidosList: "Knitwear · Circular · Tricot · Lightweight Wovens · Heavyweight Wovens · Technical Fabrics · Waterproofs",
+        expEstampadosTitle: "PRINTS",
+        expEstampadosList: "Print Design · Placement · Repeat/Rapport · Screen Printing · DTG · DTF · Sublimation",
+        c8choqTag: "Professional Experience · Fashion & Sportswear",
+        c8choqLocation: "Argentina · Nationwide Sales | 2020–present",
+        c8choqRole: "Fashion Designer · Freelance / Full Time",
+        c8choqIntro: "Argentine sportswear brand with nationwide reach. I have been linked to the brand since 2020 in various roles within the design and product development area.",
+        c8choqEvo: "I started at 8choQ during my first year of university in customer service. From my second year on, I worked as a freelance designer and, in 2024, I joined as a full-time designer until 2025. I currently continue collaborating with the brand as a freelance designer.",
+        "8qStat1": "Years",
+        "8qStat1Sub": "of experience with the brand",
+        "8qStat2": "Collections",
+        "8qStat2Sub": "fully developed",
+        "8qStat3": "Capsules",
+        "8qStat3Sub": "independent collections",
+        "8qStat4": "Garments",
+        "8qStat4Sub": "and items designed",
+        "8qStat5": "Prints",
+        "8qStat5Sub": "original artworks created",
+        t1: "Collections",
+        t2: "Garments",
         t3: "Prints",
-        t4: "Workshop",
+        t4: "Patterns",
         t5: "Production",
-        f1Title: "CONCEPT",
-        f1Sub: "Research & Creative Direction",
-        f1Body: "Collection development starts with trend forecasting, identifying visual, athletic, and cultural references that shape the seasonal direction.",
-        f2Title: "DESIGN & PATTERNMAKING",
-        f2Sub: "Sample Patterns & Development",
-        f2Body: "Silhouettes, colorways, and proportions are defined. Sample garments are produced with equivalent technical fabrics to test fit, comfort, and movement.",
-        f3Title: "TEXTILE PRINTS",
-        f3Sub: "From Concept to Garment",
-        f3Body: "Custom print design across product lines, covering graphic concepts to final garment application (placement prints and seamless repeat patterns).",
-        f4Title: "WORKSHOP",
-        f4Sub: "In-House Workshop & Samples",
-        f4Body: "Direct work in the workshop for prototype construction and supervision. Coordinating patterns, fit testing, and stitch adjustments for collections.",
+        f1Title: "COLLECTIONS",
+        f1Sub: "Sportswear, Outdoor & Urban",
+        f1Body: "Development of men's, women's, and unisex collections, focusing on sportswear, outdoor, and urban fashion, coordinating the seasonal vision.",
+        f2Title: "GARMENT DESIGN",
+        f2Sub: "Apparel and Accessories",
+        f2Body: "Design and development of garments and accessories, including t-shirts, hoodies, leggings, tops, swimwear, pants, jackets, outerwear, bags, and backpacks.",
+        f3Title: "PRINTS",
+        f3Sub: "Techniques: Screen Printing · DTG · DTF",
+        f3Body: "Development of original prints, placements, and repeats, preparing files for production using different printing techniques.",
+        f4Title: "PATTERNMAKING",
+        f4Sub: "Technical Development",
+        f4Body: "Development of patternmaking, size grading, fit sample correction, and detailed tech packs to ensure product accuracy.",
         f5Title: "PRODUCTION",
-        f5Sub: "External Workshops & Quality Control",
-        f5Body: "Bridging technical development and manufacturing. Seamless communication with external factories using comprehensive tech packs, trim specs, and size charts.",
-        kTag: "Print Shop & Production",
-        kBody: "Graphic design applied to textile manufacturing in Sydney. Full oversight of digital print operations for quick and efficient turnarounds.",
-        kStep1: "Selection",
-        kStep1Sub: "Colorway, garment, fabric, and artwork setup.",
-        kStep2: "Development",
-        kStep2Sub: "Technical files, spec sheets, and prep.",
-        kStep3: "Production",
-        kStep3Sub: "DTG, DTF, Sublimación, and quality control.",
+        f5Sub: "Fabrics, Suppliers, and Tracking",
+        f5Body1: "Selection of fabrics, colors, materials, and trims alongside the design team. Direct contact with suppliers and workshops, exhaustive tracking of samples, production, and quality control.",
+        f5Body2: "2026 · Freelance: I currently continue collaborating with 8Q developing prints and capsule collections, including womenswear and unisex proposals for Summer 2026/27.",
+        sydTag: "Personal Project · Australia · 2026",
+        sydQuote: '"Collection design and development"',
+        sydConceptTitle: "About the Project",
+        sydConceptBody: "A personal project started in Australia and developed comprehensively, exploring the relationship between design, identity, and small-scale production.",
+        sydConceptBody2: "Comprehensive development: concept, brand identity, research, collection, design, prints, patternmaking, tech packs, prototypes, production, creative direction, and communication.",
+        sydStat1: "Garments<br>developed",
+        sydStat2: "Garments<br>sold",
+        sydStat3: "Unique limited<br>designs",
+        kTag: "Professional Experience · Applied Graphic Design",
+        kLocation: "Sydney, Australia · 2026–present | Sales in NSW",
+        kRole: "Graphic Designer · Design applied to textile production",
+        kBody: "Textile printing studio in Sydney, Australia, where I develop graphic proposals applied to garments and textile products, working directly with clients and businesses.",
+        kVolume: "Regular work with companies placing orders of 50–100 units, managing approximately 1–2 projects per week.",
+        kRespTitle: "Responsibilities",
+        kResp1: "Evaluating client designs and needs to define the best graphic and production solution.",
+        kResp2: "Selecting garments, fabrics, sizes, and printing techniques based on the product and end use.",
+        kResp3: "File preparation and print development.",
+        kResp4: "Textile printing using DTF, DTG, and sublimation.",
+        kResp5: "Logo redesign and adaptation.",
+        kResp6: "Order management and tracking, dealing directly with the client.",
+        kResp7: "Coordination of high-volume orders alongside an assistant.",
+        kResp8: "Workshop production and final quality control.",
         contactTag: "Let's Connect",
         contactTitle: "Contact & Links",
         downloadCV: "Download Resume / CV", 
@@ -744,7 +853,8 @@
       document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (i18nData[lang][key]) {
-          element.textContent = i18nData[lang][key];
+          // Usamos innerHTML por si hay etiquetas como <br> (ej. en las stats de Syd Noir)
+          element.innerHTML = i18nData[lang][key];
         }
       });
     }
@@ -799,7 +909,7 @@
       if (e.target === lightbox) closeLightbox();
     });
 
-    // 5. NAVEGACIÓN Y SLIDER EN LA SECCIÓN DE 8CHOQ
+    // 5. NAVEGACIÓN Y SLIDER EN LA SECCIÓN DE 8Q
     const horizontalContainer = document.getElementById('horizontal-container');
     const navStepBtns = document.querySelectorAll('.nav-step-btn');
     const prevBtn = document.getElementById('prev-card-btn');
@@ -825,12 +935,12 @@
           dot.classList.add('bg-wine');
           dot.classList.remove('bg-transparent');
           text.classList.add('text-wine', 'font-bold');
-          text.classList.remove('text-charcoal/50', 'dark:text-paper/50');
+          text.classList.remove('text-paper/50');
         } else {
           dot.classList.remove('bg-wine');
           dot.classList.add('bg-transparent');
           text.classList.remove('text-wine', 'font-bold');
-          text.classList.add('text-charcoal/50', 'dark:text-paper/50');
+          text.classList.add('text-paper/50');
         }
       });
 
@@ -847,10 +957,11 @@
       });
     });
 
-    prevBtn.addEventListener('click', () => updateCardPosition(currentCardIndex - 1));
-    nextBtn.addEventListener('click', () => updateCardPosition(currentCardIndex + 1));
-
-    updateCardPosition(0);
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => updateCardPosition(currentCardIndex - 1));
+        nextBtn.addEventListener('click', () => updateCardPosition(currentCardIndex + 1));
+        updateCardPosition(0);
+    }
 
     // 6. Animaciones de Revelado GSAP
     gsap.registerPlugin(ScrollTrigger);
